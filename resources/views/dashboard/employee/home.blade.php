@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('User Dashboard') }}</div>
+                <div class="card-header">{{ __(' Employee Dashboard') }}</div>
 
                 <div class="card-body">
                     <table class="table table-bordered dataTable">
@@ -18,12 +18,12 @@
                     </thead>
                        <tbody>
                            <tr>
-                               <td>{{Auth::guard('web')->user()->name}}</td>
-                               <td>{{Auth::guard('web')->user()->email}}</td>
+                               <td>{{Auth::guard('employee')->user()->name}}</td>
+                               <td>{{Auth::guard('employee')->user()->email}}</td>
                                <td>
-                                   <a href="{{route('user.logout')}}"  onclick="event.preventDefault();
+                                   <a href="{{route('employee.logout')}}"  onclick="event.preventDefault();
                                    document.getElementById('logout-form').submit();">Logout</a>
-                                   <form id="logout-form" action="{{ route('user.logout') }}" method="POST" class="d-none">
+                                   <form id="logout-form" action="{{ route('employee.logout') }}" method="POST" class="d-none">
                                     @csrf
                                 </form>
                                </td>
